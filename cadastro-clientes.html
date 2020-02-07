@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="clientes.css" />
+    <link rel="stylesheet" href="cadastro-clientes.css">
     <title>PetShop!</title>
   </head>
   <nav class="navbar navbar-light bg-light">
@@ -41,24 +42,24 @@
     </ul>
   </nav>
 
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">CPF</th>
-        <th scope="col">Nome</th>
-        <th scope="col"></th>
-        <th>
-            <a class="btn btn-primary" href="cadastro-clientes.html">Novo Cliente</a>
-        </th>
-      </tr>
-    </thead>
-    <tbody data-conteudo-tabela></tbody>
-  </table>
+  <form data-form>
+        <div class="container">
+    <div class="form-group">
+      <label>CPF</label>
+      <input type="number" class="form-control" data-cpf placeholder="Digite seu CPF aqui" />
+    </div>
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" class="form-control" data-nome placeholder="Digite seu nome aqui" />
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
 
   <body>
     <script src="./api/cliente.js"></script>
-    <script src="listagem-cliente.js"></script>
-
+    <script src="./validaCPF.js"></script>
+    <script src="./cadastro-clientes.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
