@@ -30,7 +30,12 @@ formEdicao.addEventListener('submit', event => {
         alert("ESSE NÃO EXISTE")
         return 
     }
-
+    
+    if(inputCPF.value.length !== 11){
+        alert("ESSE CPF NÃO EXISTE")
+        return 
+    }
+    
     editaCliente(id, inputCPF.value, inputNome.value)
     .then( resposta => { 
         if( resposta.status === 200){
